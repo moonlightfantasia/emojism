@@ -1,4 +1,4 @@
-"""Emojism core function"""
+"""Emojism Package."""
 
 #Project: Emojism
 #Author: Littin Rajan
@@ -31,8 +31,8 @@ def emo_eraser(text):
     text = re.sub(EMOTICON_PATTERN, "", str(text))
     text = re.sub(" {2,}", " ", str(text))
     return text
-    
-    
+
+
 #function to remove emoji and emoticons
 def emo_count(text,mode="all"):
     em_list = re.findall(EMOJI_PATTERN, str(text))
