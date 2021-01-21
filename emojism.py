@@ -1,5 +1,8 @@
+"""Emojism core function"""
+
 #Project: Emojism
 #Author: Littin Rajan
+
 
 #importing required libraries
 import json
@@ -9,7 +12,7 @@ import re
 def load_dictionaries():
     with open(r'emojism/resources/emoji.json') as emoji_json_file:
         emoji_data = json.load(emoji_json_file)
-    with open(r'emojism/resources/emoticon.json') as emoticon_json_file: 
+    with open(r'emojism/resources/emoticon.json') as emoticon_json_file:
         emoticon_data = json.load(emoticon_json_file)
     #return emoji and emoticon dictionaries
     return emoji_data,emoticon_data
@@ -28,7 +31,7 @@ def emo_eraser(text):
     text = re.sub(EMOTICON_PATTERN, "", str(text))
     text = re.sub(" {2,}", " ", str(text))
     return text
-
+    
     
 #function to remove emoji and emoticons
 def emo_count(text,mode="all"):
@@ -50,13 +53,13 @@ def emo_get(text):
             em_all = ','.join(re.findall(f"[{''.join(em_pat)}]", str(text)))
         else:
             em_all = None
-    except:
+    except Exception:
         em_all = None
     return em_all
     
-
+    
 #function to get help
-def help():
+def helpme():
     print("""
     Emojism is a simple package for handling emoji and emoticons
     
