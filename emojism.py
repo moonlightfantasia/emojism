@@ -1,6 +1,6 @@
 """Emojism Package."""
 
-#Project: Emojism
+#Package: Emojism
 #Author: Littin Rajan
 
 
