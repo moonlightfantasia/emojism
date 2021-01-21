@@ -43,8 +43,8 @@ def emo_count(text,mode="all"):
     else:
         em_count = 0
     return em_count
-    
-    
+
+
 #function to get all emoji
 def emo_get(text):
     try:
@@ -56,8 +56,8 @@ def emo_get(text):
     except Exception:
         em_all = None
     return em_all
-    
-    
+
+
 #function to get help
 def helpme():
     print("""
